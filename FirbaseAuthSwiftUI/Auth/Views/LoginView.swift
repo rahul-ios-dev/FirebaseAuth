@@ -34,121 +34,124 @@ struct LoginView: View {
                     )
                     
                     // forgot
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            
-                        }, label: {
-                            Text("Forgot Password")
-                                .foregroundStyle(.gray)
-                                .font(.subheadline)
-                                .fontWeight(.medium)
-                        })
-                    }
-                    
+                    forgotButton
                     
                     // login
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("login")
-                    })
-                    .buttonStyle(CapsuleButtonStyle())
+                    loginButton
                     
+                    Spacer()
                     
-                    // bottom or
-                    HStack(spacing: 16) {
-                        line
-                        Text("OR")
-                            .fontWeight(.semibold)
-                        line
-                    }
-                    .foregroundStyle(.gray)
-                    
-                    // apple
-                    Button {
-                        
-                    } label: {
-                        Label(
-                            "Sign up with appple",
-                            systemImage: "apple.logo"
-                        )
-                    }
-                    .buttonStyle(
-                        CapsuleButtonStyle(bgColor: .black)
-                    )
-                    
-                    // google
-                    
-                    Button(action: {
-                        
-                    }, label: {
-                        HStack {
-                            Image("google")
-                                .resizable()
-                                .frame(width: 15, height: 15)
-                            Text("Sign up with google")
-                        }
-                    })
-                    .buttonStyle(
-                        CapsuleButtonStyle(
-                            bgColor: .clear,
-                            textColor: .black,
-                            hasBoarder: true
-                        )
-                    )
-                    
-                    // footer
-                    NavigationLink {
-                        
-                    } label: {
-                        HStack {
-                            Text("Don't have an account?")
-                                .foregroundStyle(.black)
-                            Text("Sign Up")
-                                .foregroundStyle(.teal)
-                        }
-                        .fontWeight(.medium)
-                    }
-
+                    bottomView
                 }
             }
             .ignoresSafeArea()
             .padding(.horizontal)
-        .padding(.vertical, 8)
+            .padding(.vertical, 8)
+            .scrollIndicators(.hidden)
         }
+    }
+    
+    private var bottomView: some View {
+        VStack(spacing: 16) {
+            // bottom or
+            lineOrView
+            
+            // apple
+            appleButton
+            
+            // google
+            googleButton
+            
+            // footer
+            footerView
+        }
+    }
+    
+    private var forgotButton: some View {
+        HStack {
+            Spacer()
+            Button(action: {
+                
+            }, label: {
+                Text("Forgot Password")
+                    .foregroundStyle(.gray)
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+            })
+        }
+    }
+    
+    private var loginButton: some View {
+        Button(action: {
+            
+        }, label: {
+            Text("login")
+        })
+        .buttonStyle(CapsuleButtonStyle())
     }
     
     private var line: some View {
         VStack { Divider().frame(height: 1)}
     }
+    
+    private var lineOrView: some View {
+        HStack(spacing: 16) {
+            line
+            Text("OR")
+                .fontWeight(.semibold)
+            line
+        }
+        .foregroundStyle(.gray)
+    }
+    
+    private var appleButton: some View {
+        Button {
+            
+        } label: {
+            Label(
+                "Sign up with appple",
+                systemImage: "apple.logo"
+            )
+        }
+        .buttonStyle(
+            CapsuleButtonStyle(bgColor: .black)
+        )
+    }
+    
+    private var googleButton: some View {
+        Button(action: {
+        }, label: {
+            HStack {
+                Image("google")
+                    .resizable()
+                    .frame(width: 15, height: 15)
+                Text("Sign up with google")
+            }
+        })
+        .buttonStyle(
+            CapsuleButtonStyle(
+                bgColor: .clear,
+                textColor: .black,
+                hasBoarder: true
+            )
+        )
+    }
+    
+    private var footerView: some View {
+        NavigationLink {
+            
+        } label: {
+            HStack {
+                Text("Don't have an account?")
+                    .foregroundStyle(.black)
+                Text("Sign Up")
+                    .foregroundStyle(.teal)
+            }
+            .fontWeight(.medium)
+        }
+    }
 }
 
 #Preview {
     LoginView()
-}
-
-
-struct CapsuleButtonStyle: ButtonStyle {
-    var bgColor: Color = .teal
-    var textColor: Color = .white
-    var hasBoarder: Bool = false
-    
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .foregroundStyle(textColor)
-            .padding()
-            .frame(maxWidth: .infinity)
-            .background(Capsule().fill(bgColor))
-            .scaleEffect(configuration.isPressed ? 0.95 : 1)
-            .overlay {
-                hasBoarder ?
-                Capsule()
-                    .stroke(
-                        .gray,
-                        lineWidth: 1.0
-                    ) :
-                nil
-            }
-    }
 }
