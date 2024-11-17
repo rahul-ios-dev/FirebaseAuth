@@ -34,13 +34,28 @@ struct CreateAccountView: View {
             
             InputView(
                 placeholder: "Password",
+                isSecureField: true,
                 text: $password
             )
             
-            InputView(
-                placeholder: "Confirm Password",
-                text: $confirmPassword
-            )
+            ZStack(alignment: .trailing) {
+                InputView(
+                    placeholder: "Confirm Password",
+                    isSecureField: true,
+                    text: $confirmPassword
+                )
+                
+                Spacer()
+                
+                if !password.isEmpty && !confirmPassword.isEmpty {
+                    VStack {
+                        Image(systemName: "\(isValiPassword ? "checkmark" : "xmark").circle.fill")
+                            .imageScale(.large)
+                            .fontWeight(.bold)
+                            .foregroundColor(isValiPassword ? .green : .red)
+                    }
+                }
+            }
             
             Spacer()
             
@@ -53,6 +68,7 @@ struct CreateAccountView: View {
             
         }
         .navigationTitle("Set up your account")
+        .toolbarRole(.editor) // remove back button
         .padding()
     }
     
