@@ -4,6 +4,7 @@ struct LoginView: View {
     
     @State private var email: String = ""
     @State private var password: String = ""
+    @StateObject private var authViewModel = AuthViewModel()
     
     var body: some View {
         NavigationStack {
@@ -82,9 +83,16 @@ struct LoginView: View {
     }
     
     private var loginButton: some View {
-        Button(action: {
-            
-        }, label: {
+        Button(
+            action: {
+                Task {
+                    await authViewModel.login(
+                        email: email,
+                        password: password
+                    )
+                }
+            },
+            label: {
             Text("login")
         })
         .buttonStyle(CapsuleButtonStyle())
@@ -155,3 +163,5 @@ struct LoginView: View {
 #Preview {
     LoginView()
 }
+
+

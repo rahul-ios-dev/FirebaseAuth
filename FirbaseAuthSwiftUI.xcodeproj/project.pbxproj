@@ -16,9 +16,15 @@
 		4D5B58832CE5D2F800769398 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B58822CE5D2F800769398 /* InputView.swift */; };
 		4D890BCD2CE79CE200D1BE0F /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D890BCC2CE79CE100D1BE0F /* CapsuleButtonStyle.swift */; };
 		4D890BCF2CE79D3F00D1BE0F /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D890BCE2CE79D3F00D1BE0F /* CreateAccountView.swift */; };
+		4DAFC3EF2CF09F6D0001BF58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFC3EE2CF09F6D0001BF58 /* GoogleService-Info.plist */; };
+		4DAFC3F12CF0A3410001BF58 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFC3F02CF0A3410001BF58 /* AuthViewModel.swift */; };
+		4DAFC3F32CF0A35B0001BF58 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAFC3F22CF0A35B0001BF58 /* User.swift */; };
+		C37338FBEFD53A84D728FF72 /* Pods_FirbaseAuthSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374F9B718A39A602AB12ECAA /* Pods_FirbaseAuthSwiftUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		374F9B718A39A602AB12ECAA /* Pods_FirbaseAuthSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirbaseAuthSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40B375FACF8D168A53369542 /* Pods-FirbaseAuthSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirbaseAuthSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-FirbaseAuthSwiftUI/Pods-FirbaseAuthSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		4D5B58612CE5CD4900769398 /* FirbaseAuthSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirbaseAuthSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D5B58642CE5CD4900769398 /* FirbaseAuthSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirbaseAuthSwiftUIApp.swift; sourceTree = "<group>"; };
 		4D5B58662CE5CD4900769398 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,6 +35,10 @@
 		4D5B58822CE5D2F800769398 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		4D890BCC2CE79CE100D1BE0F /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
 		4D890BCE2CE79D3F00D1BE0F /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		4DAFC3EE2CF09F6D0001BF58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DAFC3F02CF0A3410001BF58 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthViewModel.swift; path = FirbaseAuthSwiftUI/Auth/AuthViewModel.swift; sourceTree = SOURCE_ROOT; };
+		4DAFC3F22CF0A35B0001BF58 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = FirbaseAuthSwiftUI/Auth/User.swift; sourceTree = SOURCE_ROOT; };
+		CED7967B802C582A2C7F0EF2 /* Pods-FirbaseAuthSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirbaseAuthSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-FirbaseAuthSwiftUI/Pods-FirbaseAuthSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +46,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C37338FBEFD53A84D728FF72 /* Pods_FirbaseAuthSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D733ADCDE37570268CC2646 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				374F9B718A39A602AB12ECAA /* Pods_FirbaseAuthSwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4D5B58582CE5CD4900769398 = {
 			isa = PBXGroup;
 			children = (
 				4D5B58632CE5CD4900769398 /* FirbaseAuthSwiftUI */,
 				4D5B58622CE5CD4900769398 /* Products */,
+				AFEF49636F05D73FC63F1E31 /* Pods */,
+				2D733ADCDE37570268CC2646 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +145,7 @@
 		4D5B58782CE5CE2800769398 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4DAFC3F22CF0A35B0001BF58 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -142,6 +164,7 @@
 		4D5B587A2CE5CE3300769398 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4DAFC3F02CF0A3410001BF58 /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -150,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				4D5B587C2CE5CE9300769398 /* LoginAssets.xcassets */,
+				4DAFC3EE2CF09F6D0001BF58 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -162,6 +186,15 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		AFEF49636F05D73FC63F1E31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40B375FACF8D168A53369542 /* Pods-FirbaseAuthSwiftUI.debug.xcconfig */,
+				CED7967B802C582A2C7F0EF2 /* Pods-FirbaseAuthSwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D5B586F2CE5CD4A00769398 /* Build configuration list for PBXNativeTarget "FirbaseAuthSwiftUI" */;
 			buildPhases = (
+				A4B9A45DA2D48C5A35C3BFFF /* [CP] Check Pods Manifest.lock */,
 				4D5B585D2CE5CD4900769398 /* Sources */,
 				4D5B585E2CE5CD4900769398 /* Frameworks */,
 				4D5B585F2CE5CD4900769398 /* Resources */,
+				960AF77E26FD10480B6EDBB4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,12 +256,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D5B586C2CE5CD4A00769398 /* Preview Assets.xcassets in Resources */,
+				4DAFC3EF2CF09F6D0001BF58 /* GoogleService-Info.plist in Resources */,
 				4D5B587D2CE5CE9300769398 /* LoginAssets.xcassets in Resources */,
 				4D5B58692CE5CD4A00769398 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		960AF77E26FD10480B6EDBB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirbaseAuthSwiftUI/Pods-FirbaseAuthSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirbaseAuthSwiftUI/Pods-FirbaseAuthSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirbaseAuthSwiftUI/Pods-FirbaseAuthSwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4B9A45DA2D48C5A35C3BFFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirbaseAuthSwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D5B585D2CE5CD4900769398 /* Sources */ = {
@@ -236,6 +314,8 @@
 				4D890BCF2CE79D3F00D1BE0F /* CreateAccountView.swift in Sources */,
 				4D890BCD2CE79CE200D1BE0F /* CapsuleButtonStyle.swift in Sources */,
 				4D5B587F2CE5CFA800769398 /* LoginView.swift in Sources */,
+				4DAFC3F12CF0A3410001BF58 /* AuthViewModel.swift in Sources */,
+				4DAFC3F32CF0A35B0001BF58 /* User.swift in Sources */,
 				4D5B58832CE5D2F800769398 /* InputView.swift in Sources */,
 				4D5B58672CE5CD4900769398 /* ContentView.swift in Sources */,
 				4D5B58652CE5CD4900769398 /* FirbaseAuthSwiftUIApp.swift in Sources */,
@@ -366,6 +446,7 @@
 		};
 		4D5B58702CE5CD4A00769398 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40B375FACF8D168A53369542 /* Pods-FirbaseAuthSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -374,11 +455,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FirbaseAuthSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationUsageDescription = "Please allow";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,6 +467,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.FirbaseAuthSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -394,6 +479,7 @@
 		};
 		4D5B58712CE5CD4A00769398 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CED7967B802C582A2C7F0EF2 /* Pods-FirbaseAuthSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -402,11 +488,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FirbaseAuthSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationUsageDescription = "Please allow";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,6 +500,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.FirbaseAuthSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
