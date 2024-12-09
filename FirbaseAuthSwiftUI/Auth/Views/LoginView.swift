@@ -4,7 +4,7 @@ struct LoginView: View {
     
     @State private var email: String = ""
     @State private var password: String = ""
-    @StateObject private var authViewModel = AuthViewModel()
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     var body: some View {
         NavigationStack {
@@ -148,6 +148,7 @@ struct LoginView: View {
     private var footerView: some View {
         NavigationLink {
             CreateAccountView()
+                .environmentObject(authViewModel)
         } label: {
             HStack {
                 Text("Don't have an account?")

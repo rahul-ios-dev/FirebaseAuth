@@ -13,7 +13,7 @@ struct CreateAccountView: View {
     @State private var fullName: String = ""
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
-    @StateObject private var authViewModel = AuthViewModel()
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     var body: some View {
         VStack(spacing: 16) {

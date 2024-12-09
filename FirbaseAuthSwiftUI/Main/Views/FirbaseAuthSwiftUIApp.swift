@@ -25,10 +25,12 @@ class ApplicationDelegate: NSObject, UIApplicationDelegate {
 struct FirbaseAuthSwiftUIApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(ApplicationDelegate.self) var delegate
+    @StateObject private var authViewModel = AuthViewModel()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(authViewModel)
         }
     }
 }

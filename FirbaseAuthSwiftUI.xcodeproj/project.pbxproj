@@ -17,13 +17,13 @@
 		4D5B587D2CE5CE9300769398 /* LoginAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D5B587C2CE5CE9300769398 /* LoginAssets.xcassets */; };
 		4D5B587F2CE5CFA800769398 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B587E2CE5CFA800769398 /* LoginView.swift */; };
 		4D5B58832CE5D2F800769398 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B58822CE5D2F800769398 /* InputView.swift */; };
+		4D66CEFF2D06C6950095E037 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D66CEFE2D06C6950095E037 /* ProfileView.swift */; };
 		4D890BCD2CE79CE200D1BE0F /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D890BCC2CE79CE100D1BE0F /* CapsuleButtonStyle.swift */; };
 		4D890BCF2CE79D3F00D1BE0F /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D890BCE2CE79D3F00D1BE0F /* CreateAccountView.swift */; };
 		4DAFC3EF2CF09F6D0001BF58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DAFC3EE2CF09F6D0001BF58 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D5B58612CE5CD4900769398 /* FirbaseAuthSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FirbaseAuthSwiftUI.app; path = "/Users/rahulacharya/Documents/GitHub/FirebaseAuth/build/Debug-iphoneos/FirbaseAuthSwiftUI.app"; sourceTree = "<absolute>"; };
 		4D5B58642CE5CD4900769398 /* FirbaseAuthSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirbaseAuthSwiftUIApp.swift; sourceTree = "<group>"; };
 		4D5B58662CE5CD4900769398 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D5B58682CE5CD4A00769398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,34 +31,16 @@
 		4D5B587C2CE5CE9300769398 /* LoginAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LoginAssets.xcassets; sourceTree = "<group>"; };
 		4D5B587E2CE5CFA800769398 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4D5B58822CE5D2F800769398 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		4D66CEF72D06C48B0095E037 /* FirbaseAuthSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirbaseAuthSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D66CEFE2D06C6950095E037 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4D890BCC2CE79CE100D1BE0F /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
 		4D890BCE2CE79D3F00D1BE0F /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		4DAFC3EE2CF09F6D0001BF58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		4D5D3C0E2CF883900086E269 /* Model */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4D5D3C0F2CF883940086E269 /* ViewModel */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
+		4D5D3C0E2CF883900086E269 /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
+		4D5D3C0F2CF883940086E269 /* ViewModel */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModel; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				4D5B58632CE5CD4900769398 /* FirbaseAuthSwiftUI */,
+				4D66CEF72D06C48B0095E037 /* FirbaseAuthSwiftUI.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +133,7 @@
 			children = (
 				4D890BCB2CE79CAF00D1BE0F /* Styles */,
 				4D5B587E2CE5CFA800769398 /* LoginView.swift */,
+				4D66CEFE2D06C6950095E037 /* ProfileView.swift */,
 				4D5B58822CE5D2F800769398 /* InputView.swift */,
 				4D890BCE2CE79D3F00D1BE0F /* CreateAccountView.swift */,
 			);
@@ -194,7 +178,7 @@
 			);
 			name = FirbaseAuthSwiftUI;
 			productName = FirbaseAuthSwiftUI;
-			productReference = 4D5B58612CE5CD4900769398 /* FirbaseAuthSwiftUI.app */;
+			productReference = 4D66CEF72D06C48B0095E037 /* FirbaseAuthSwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -254,6 +238,7 @@
 			files = (
 				4D890BCF2CE79D3F00D1BE0F /* CreateAccountView.swift in Sources */,
 				4D890BCD2CE79CE200D1BE0F /* CapsuleButtonStyle.swift in Sources */,
+				4D66CEFF2D06C6950095E037 /* ProfileView.swift in Sources */,
 				4D5B587F2CE5CFA800769398 /* LoginView.swift in Sources */,
 				4D5B58832CE5D2F800769398 /* InputView.swift in Sources */,
 				4D5B58672CE5CD4900769398 /* ContentView.swift in Sources */,
